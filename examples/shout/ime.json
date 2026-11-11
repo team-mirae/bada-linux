@@ -1,0 +1,16 @@
+{
+  "name": "shout",
+  "description": "shout (team-mirae/bada-compatible's example IME) on Linux: henkan mode types CAPITALS; Tab, the arrows or 変換 offer lowercase. 半角/全角 in muhenkan shouts the selection. Settings: {\"forms\": [\"upper\", \"lower\", \"title\"]}.",
+  "library": "{arch}/libshout.so",
+  "prefix": "shout",
+  "settings": { "forms": ["upper", "lower"] },
+  "mode": "henkan",
+  "keyboard": "jis",
+  "linux": {
+    "id": "bada-shout",
+    "display_name": "shout (bada-linux)",
+    "language": "ja",
+    "layout": "jp",
+    "labels": { "henkan": "SH", "muhenkan": "sh" }
+  }
+}
