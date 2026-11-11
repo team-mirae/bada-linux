@@ -1,0 +1,27 @@
+# tools/test.sh on x86_64 and arm64: shout from team-mirae/bada-compatible, then bada-linux's core
+# tests (plain and ASan/UBSan) and the end-to-end tests through Fcitx5 and IBus, in Docker.
+name: test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: bada-linux
+      - uses: actions/checkout@v4
+        with:
+          repository: team-mirae/bada-compatible
+          path: bada-compatible
+      - name: tools/test.sh
+        run: bada-linux/tools/test.sh

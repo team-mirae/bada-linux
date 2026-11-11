@@ -251,4 +251,4 @@ with no UI (owner, 2026-11-11).
 - **[measure]** Which apps give surrounding text (GTK and Qt do; terminals, Electron, XWayland
   through XIM mostly don't), so `need_selection` answers `""` there.
 - **[decide]** Packages (deb, rpm, AUR, a Flatpak extension for Fcitx5).
-- Not built: an x86_64 build is untested here (the code doesn't block it: `{arch}` is `x86_64`).
+- Every test runs in containers only (GitHub Actions: x86_64 and arm64); nothing on a desktop yet.

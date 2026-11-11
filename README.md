@@ -11,9 +11,10 @@ hosts any engine.
 The example IME is **shout**, bada-compatible's template IME: henkan mode types CAPITALS, Tab or 変換
 offer lowercase, 半角/全角 in muhenkan shouts the selection.
 
-> [!NOTE]
-> Built and tested in a container against real Fcitx5 5.1.12 and IBus 1.5.32 (core tests, and
-> end-to-end tests that drive both frameworks over D-Bus as apps do). Not yet tried on a desktop with
+> [!WARNING]
+> **Only tested on virtual machines.** Built and tested in Linux containers against real Fcitx5
+> 5.1.12 and IBus 1.5.32 (core tests, and end-to-end tests that drive both frameworks over D-Bus as
+> apps do), locally and in [GitHub Actions](.github/workflows/test.yml). Never run on a desktop with
 > a real JIS keyboard: see [docs/spec.md §10](docs/spec.md#10-open-questions).
 
 ## One input method, two modes

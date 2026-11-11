@@ -17,6 +17,9 @@ has the build machine's architecture (aarch64 on Apple silicon). Built files sta
 
 `tools/test.sh shell` opens a shell in the same container (`sh /src/tools/ci.sh` from there).
 
+GitHub Actions runs `tools/test.sh` on every push and pull request, on x86_64 and arm64 runners
+(`.github/workflows/test.yml`), with bada-compatible's `main` checked out next to it.
+
 The end-to-end tests check what a framework does with the addon; they can't check a real keyboard,
 a desktop's indicator, or apps. Those are the **[measure]** items in docs/spec.md §10: test on a
 desktop (a VM with GNOME for IBus, KDE for Fcitx5), and add what you measure to the spec with the date.
